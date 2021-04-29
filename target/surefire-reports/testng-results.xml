@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="10552" started-at="2021-04-29T12:40:18 IST" finished-at="2021-04-29T12:40:29 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="10552" started-at="2021-04-29T12:40:18 IST" finished-at="2021-04-29T12:40:29 IST">
+      <class name="mavenforjenkins.UITest">
+        <test-method status="PASS" signature="startBrowser()[pri:0, instance:mavenforjenkins.UITest@6d7b4f4c]" name="startBrowser" duration-ms="10464" started-at="2021-04-29T12:40:18 IST" finished-at="2021-04-29T12:40:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+      </class> <!-- mavenforjenkins.UITest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
