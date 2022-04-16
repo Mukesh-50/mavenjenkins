@@ -1,0 +1,43 @@
+pipeline 
+{
+    agent any
+
+    stages 
+    {
+        stage('Build') 
+        {
+            steps 
+            {
+                echo 'Build App'
+            }
+        }
+         stage('Test') 
+        {
+            steps 
+            {
+                echo 'Test App'
+            }
+        }
+         stage('Deploy') 
+        {
+            steps 
+            {
+                echo 'Deploye App'
+            }
+        }
+         stage('Delivery') 
+        {
+            steps 
+            {
+                echo 'Delivery App'
+            }
+        }
+    }
+    post
+    {
+        always
+        {
+            mail bcc: '', body: 'cool', cc: '', from: '', replyTo: '', subject: 'pipeline status', to: 'nsrikanth954@gmail.com'
+        }
+    }
+}
