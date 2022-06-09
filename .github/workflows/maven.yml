@@ -16,13 +16,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Set up JDK 11
+    - name: Set up JDK 8
       uses: actions/setup-java@v3
       with:
-        java-version: '11'
-        distribution: 'temurin'
-        cache: maven
-    - name: Build with Maven
+        java-version: 1.8
+    - name: Test On Linux
       run: mvn clean test -DBrowser=Chrome
 
   SeleniumWindow:
@@ -33,7 +31,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Test with Maven
+    - name: Test with Windows
       run: mvn clean test -DBrowser=Chrome
 
   SeleniumMACOS:
@@ -44,5 +42,5 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Test with Maven
+    - name: Test with MacOS
       run: mvn clean test -DBrowser=Chrome
