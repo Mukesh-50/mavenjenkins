@@ -6,7 +6,7 @@ name: ScheduledTest
 
 on:
   schedule:
-    - cron:  '*/5 * * * *'
+    - cron:  '0 1 * * *'
 
 jobs:
   SeleniumLinux:
