@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test thread-count="5" name="Test2">   
     <classes>
-      <class name="mavenforjenkins.UITest"/>    
+      <class name="mavenforjenkins.UITest"/>     
     </classes>
   </test> 
 </suite> 
