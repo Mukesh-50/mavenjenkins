@@ -48,7 +48,6 @@
 					</suiteXmlFiles>
 					
 					<systemPropertyVariables>
-					
 					<browser>${Browser}</browser>
 					
 					</systemPropertyVariables>
