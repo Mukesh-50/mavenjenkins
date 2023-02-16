@@ -1,41 +1,22 @@
-pipeline 
-{
+pipeline {
     agent any
-
-    stages 
-    {
-        stage('Build') 
+stages
+{
+     stage ('maven version') 
+   {
+            Steps
         {
-            steps 
-            {
-                echo 'Build App'
-            }
+          Bat label: “, script: ‘mvn -v’
         }
-
-        stage('Test') 
-        {
-            steps 
-            {
-                echo 'Test App'
+   }
+     
+         Stages ('Running Test')
+ {
+        steps('Test') 
+         {
+                Bat label: “, script: ‘mvn clean test’
             }
-        }
-
-        stage('Deploy') 
-        {
-            steps 
-            {
-                echo 'Deploy App'
-            }
-        }
-    }
-
-    post
-    {
-
-    	always
-    	{
-    		emailext body: 'Summary', subject: 'Pipeline Status', to: 'selenium3bymukesh@gmail.com'
-    	}
-
-    }
+   }
+            
+  }
 }
