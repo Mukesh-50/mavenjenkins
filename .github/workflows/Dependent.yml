@@ -11,13 +11,15 @@ on:
 
 jobs:
   SeleniumLinux:
+
     runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v3
-    - name: Set up JDK 8
+    - name: Set up JDK 11
       uses: actions/setup-java@v3
       with:
-        java-version: 8.0.302+8
+        java-version: '11'
         distribution: 'temurin'
     - name: Test On Linux
       run: mvn clean test -DBrowser=Chrome
@@ -26,11 +28,12 @@ jobs:
     needs: SeleniumLinux
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
       with:
-        java-version: 1.8
+        java-version: '11'
+        distribution: 'temurin'
     - name: Test with Windows
       run: mvn clean test -DBrowser=Chrome
 
@@ -38,10 +41,11 @@ jobs:
     needs: SeleniumWindow
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
+    - uses: actions/checkout@v3
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
       with:
-        java-version: 1.8
+        java-version: '11'
+        distribution: 'temurin'
     - name: Test with MacOS
       run: mvn clean test -DBrowser=Chrome

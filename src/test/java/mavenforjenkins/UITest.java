@@ -7,7 +7,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class UITest 
 {
@@ -21,7 +20,6 @@ public class UITest
 		
 		if(browserName.contains("Chrome"))
 		{
-			WebDriverManager.chromedriver().setup();
 			ChromeOptions opt=new ChromeOptions();
 			opt.addArguments("--headless");
 			opt.addArguments("--no-sandbox");
@@ -30,7 +28,6 @@ public class UITest
 		}
 		else if(browserName.contains("Edge"))
 		{
-			WebDriverManager.edgedriver().setup();
 			 driver=new EdgeDriver();
 		}
 		driver.manage().window().maximize();
