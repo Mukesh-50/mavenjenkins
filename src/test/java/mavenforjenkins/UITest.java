@@ -28,7 +28,6 @@ public class UITest
 		}
 		else if(browserName.contains("Edge"))
 		{
-			WebDriverManager.edgedriver().setup();
 			 driver=new EdgeDriver();
 		}
 		driver.manage().window().maximize();
