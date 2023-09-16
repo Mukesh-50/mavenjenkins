@@ -6,7 +6,7 @@ name: ScheduledTest
 
 on:
   schedule:
-    - cron:  '0 1 * * *'
+    - cron:  '*/2 * * * *'
 
 jobs:
   SeleniumLinux:
@@ -18,7 +18,7 @@ jobs:
     - name: Set up JDK 8
       uses: actions/setup-java@v3
       with:
-        java-version: 8.0.302+8
+        java-version: '11'
         distribution: 'temurin'
     - name: Test On Linux
       run: mvn clean test -DBrowser=Chrome
