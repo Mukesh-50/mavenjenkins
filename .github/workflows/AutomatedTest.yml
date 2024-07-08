@@ -23,6 +23,7 @@ jobs:
       run: mvn clean test -DBrowser=Chrome
 
   SeleniumTestOnWindows:
+    needs: SeleniumTestOnLinux
     runs-on: windows-latest
 
     steps:
@@ -37,6 +38,7 @@ jobs:
       run: mvn clean test -DBrowser=Chrome
 
   SeleniumTestOnMAC:
+    needs: SeleniumTestOnWindows
     runs-on: macos-latest
 
     steps:
