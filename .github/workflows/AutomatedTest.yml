@@ -21,3 +21,33 @@ jobs:
        
     - name: Running Test On Linux
       run: mvn clean test -DBrowser=Chrome
+
+  SeleniumTestOnWindows:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setting up JDK 11 For Test Execution
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+       
+    - name: Running Test On Windows
+      run: mvn clean test -DBrowser=Chrome
+
+  SeleniumTestOnMAC:
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setting up JDK 11 For Test Execution
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+       
+    - name: Running Test On MACOS
+      run: mvn clean test -DBrowser=Chrome
+
+  
