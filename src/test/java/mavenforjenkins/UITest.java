@@ -25,6 +25,7 @@ public class UITest
 			opt.addArguments("--no-sandbox");
 			opt.addArguments("--disable-dev-shm-usage");
 			driver=new ChromeDriver(opt);
+			//System.out.println("Hello World!!");
 		}
 		else if(browserName.contains("Edge"))
 		{
